@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="src/styles.css" />
+  <title>WeatherApp</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      <div class="row">
+        <div class="col-6">
+          <span class="currentTemperature" id="temperature"> </span>
+          <span class="unit" id="celsius">°C</span>
+        </div>
+        <div class="col-6">
+          <img src="media/sun.png" alt="sunIcon" class="iconCurrentDay" />
+        </div>
+      </div>
+    </h1>
+
+    <h2 class="city" id="city"></h2>
+    <p class="description" id="daily-description"></p>
+
+
+
+    <div class="row">
+      <div class="col-6">
+        <span class="currentDay" id="actual-day"> </span>
+      </div>
+      <div class="col-6">
+        <p class="dayMaxMinTemp"><strong>16 </strong> 10</p>
+      </div>
+    </div>
+    <hr color="#f095a3" />
+    <div class="row">
+      <div class="col-5">
+        <p class="Days">
+          Friday
+        </p>
+      </div>
+      <div class="col-3">
+        <img src="media/cloud.png" alt="cloudIcon" class="iconSixDays" />
+      </div>
+      <div class="col-4">
+        <p class="tempDays"><strong>16 </strong> 10</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-5">
+        <p class="Days">
+          Saturday
+        </p>
+      </div>
+      <div class="col-3">
+        <img src="media/wind.png" alt="windIcon" class="iconSixDays" />
+      </div>
+      <div class="col-4">
+        <p class="tempDays"><strong>16 </strong> 10</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-5">
+        <p class="Days">
+          Sunday
+        </p>
+      </div>
+      <div class="col-3">
+        <img src="media/thunder.png" alt="thunderIcon" class="iconSixDays" />
+      </div>
+      <div class="col-4">
+        <p class="tempDays"><strong>16 </strong> 10</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-5">
+        <p class="Days">
+          Monday
+        </p>
+      </div>
+      <div class="col-3">
+        <img src="media/cloudy_sun.png" alt="sunAndCloudsIcon" class="iconSixDays" />
+      </div>
+      <div class="col-4">
+        <p class="tempDays"><strong>16 </strong> 10</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-5">
+        <p class="Days">
+          Tuesday
+        </p>
+      </div>
+      <div class="col-3">
+        <img src="media/rain.png" alt="rainIcon" class="iconSixDays" />
+      </div>
+      <div class="col-4">
+        <p class="tempDays"><strong>16 </strong> 10</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-5">
+        <p class="Days">
+          Wednesday
+        </p>
+      </div>
+      <div class="col-3">
+        <img src="media/cloudy_sun.png" alt="sunAndCloudsIcon" class="iconSixDays" />
+      </div>
+      <div class="col-4">
+        <p class="tempDays"><strong>16 </strong> 10</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p class="humidity">
+          Humidity</br>
+          <spam id="humidity">
+
+          </spam>
+          %
+        </p>
+      </div>
+      <div class="col-6">
+        <p class="wind">
+          Wind</br>
+          <spam id="wind"></spam>
+          km/h
+        </p>
+      </div>
+    </div>
+    <form id="search-form">
+      <div class="row">
+        <div class="col-6">
+          <input type="text" class="form-control" autocomplete="off" placeholder="search" id="search-text-input" />
+        </div>
+        <div class="col-2">
+          <input type="submit" value="🔍" class="button" id="search-button" />
+        </div>
+        <div class="col-4">
+          <button type="button" class="btn btn-secondary" id="location-button">
+            Location
+          </button>
+        </div>
+      </div>
+    </form>
+    <p class="moonCalendar">
+      Moon Calendar
+    </p>
+    <div class="row">
+      <div class="col-6">
+        <p class="moon1">
+          <strong> Moon Phase Today</strong> Waxing gibbous
+          <br />
+          llumination 93.3% Visible
+          <br />
+          Ris/Set 05:13 PM / 03:15 AM
+          <br />
+        </p>
+      </div>
+      <div class="col-6">
+        <p class="moon2">
+          <strong>Next moon phase</strong>
+          <br />
+          Full Moon
+          <br />
+          05 July 05:44 am
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/index.js"></script>
+</body>
+
+</html>
