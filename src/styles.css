@@ -87,19 +87,19 @@ hr {
 }
 
 .form-control {
-  background-color: transparent;
+  background-color: #f095a3;
   border-color: transparent;
   box-shadow: 0 1px 1px #f095a3;
   margin-left: 20px;
 }
-.button {
-  background-color: transparent;
-  border-color: transparent;
-}
-.btn-secondary {
-  margin-right: 50px;
+
+.fa-search {
+  color: #f095a3;
 }
 
+.fa-map-marker-alt {
+  color: #f095a3;
+}
 .moonCalendar {
   text-align: center;
   padding-top: 20px;
