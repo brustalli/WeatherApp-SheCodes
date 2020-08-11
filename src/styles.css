@@ -104,16 +104,7 @@ hr {
 .fa-map-marker-alt {
   color: #f095a3;
 }
-.moonCalendar {
-  text-align: center;
-  padding-top: 20px;
-  font-size: 24px;
-}
-.moon1,
-.moon2 {
-  font-size: 12px;
-  margin-left: 20px;
-}
+
 .openSource {
   font-size: 10px;
   margin-left: 35px;
