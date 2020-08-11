@@ -1,111 +1,113 @@
 body {
   font-family: "Montserrat", sans-serif;
-  color: #f095a3;
+  color: #ffffff;
 }
 
 .container {
   width: 22rem;
   height: responsive;
-  margin-left: 30px;
+  margin-left: 100px;
   margin-top: 30px;
   background-color: #0273a9;
   border-radius: 10px;
+  padding-bottom: 25px;
 }
 
-h1 {
-  padding: 25px 10px 0 20px;
-}
 .unit {
   position: relative;
   left: -11px;
   font-size: 14px;
   top: -35px;
 }
+h1 {
+  padding: 25px 0 0 0;
+  margin-left: 30px;
+}
+
 .currentTemperature {
-  font-size: 70px;
+  font-size: 65px;
   font-weight: lighter;
 }
 
 .iconCurrentDay {
-  width: 90px;
-  margin-top: 10px;
-  margin-left: 35px;
+  width: 110px;
+  margin-top: -15px;
 }
 
 .city {
   position: relative;
-  top: -10px;
-  font-size: 18px;
+  top: -25px;
+  font-size: 16px;
   color: #ffffff;
-  margin-left: 20px;
+  margin-left: 30px;
   font-weight: lighter;
 }
 .description {
   position: relative;
-  top: -10px;
+  top: -25px;
   font-size: 14px;
   color: #ffffff;
-  margin-left: 20px;
+  margin-left: 30px;
   font-weight: lighter;
 }
-
 .humidity,
 .wind {
-  font-size: 12px;
+  font-size: 11px;
   color: #ffffff;
-  margin-left: 20px;
+  position: relative;
+  top: -25px;
+  list-style: none;
+  margin-left: -12px;
 }
-.dayForecast {
-  font-size: 14px;
-  margin-left: 35px;
-}
-
 .currentDay {
   font-size: 14px;
-  margin-left: 23px;
-  position: relative;
-  bottom: -20px;
+  margin-left: 40px;
+  margin-bottom: -30px;
+  margin-top: -20px;
 }
+
 .dayMaxMinTemp {
   font-size: 14px;
-  margin-left: 78px;
-  position: relative;
-  bottom: -20px;
+  margin-left: 50px;
+  margin-bottom: -30px;
 }
-hr {
-  margin-bottom: 10px;
-}
+
 .iconSixDays {
   width: 43px;
 }
 .Days {
   font-size: 14px;
-  margin-left: 23px;
+  margin-left: 40px;
 }
 .tempDays {
   font-size: 14px;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .form-control {
-  background-color: #f095a3;
+  background-color: #ec6f4c;
   border-color: transparent;
-  box-shadow: 0 1px 1px #f095a3;
-  margin-left: 20px;
+  box-shadow: 0 1px 1px #ec6e4c;
+  margin-left: 25px;
+  margin-top: 15px;
 }
 .button {
   background: transparent;
   border: transparent;
+  margin-top: 20px;
 }
 .fa-search {
-  color: #f095a3;
+  color: #ec6e4c;
+  margin-left: 5px;
 }
 
 .fa-map-marker-alt {
-  color: #f095a3;
+  color: #ec6e4c;
+  margin-left: -10px;
 }
 
 .openSource {
   font-size: 10px;
-  margin-left: 35px;
+  margin-left: 105px;
+  color: #ec6e4c;
 }
