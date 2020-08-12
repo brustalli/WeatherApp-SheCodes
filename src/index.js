@@ -86,7 +86,9 @@ document
 
 function showCelsiusTemp(event) {
   event.preventDefault();
-  document.querySelector(`#temperature`).innerHTML = celsiusTemperature;
+  document.querySelector(`#temperature`).innerHTML = Math.round(
+    celsiusTemperature
+  );
 }
 
 document.querySelector(`#celsius`).addEventListener(`click`, showCelsiusTemp);
