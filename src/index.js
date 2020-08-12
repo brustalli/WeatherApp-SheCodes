@@ -35,10 +35,10 @@ form.addEventListener("submit", handleSubmit);
 
 function showTemperature(response) {
   document.querySelector(`#city`).innerHTML = response.data.name;
+  celsiusTemperature = response.data.main.temp;
   document.querySelector(`#temperature`).innerHTML = Math.round(
     celsiusTemperature
   );
-  celsiusTemperature = response.data.main.temp;
 
   document.querySelector(`#humidity`).innerHTML = response.data.main.humidity;
   document.querySelector(`#wind`).innerHTML = Math.round(
@@ -79,6 +79,8 @@ function showFahrenheitTemp(event) {
   event.preventDefault();
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
   document.querySelector(`#temperature`).innerHTML = Math.round(fahrenheitTemp);
+  celsius.classList.remove(`active`);
+  fahrenheit.classList.add(`active`);
 }
 document
   .querySelector(`#fahrenheit`)
@@ -89,6 +91,8 @@ function showCelsiusTemp(event) {
   document.querySelector(`#temperature`).innerHTML = Math.round(
     celsiusTemperature
   );
+  celsius.classList.add(`active`);
+  fahrenheit.classList.remove(`active`);
 }
 
 document.querySelector(`#celsius`).addEventListener(`click`, showCelsiusTemp);
