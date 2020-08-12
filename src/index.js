@@ -34,11 +34,12 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 function showTemperature(response) {
-  console.log(response.data);
   document.querySelector(`#city`).innerHTML = response.data.name;
   document.querySelector(`#temperature`).innerHTML = Math.round(
-    response.data.main.temp
+    celsiusTemperature
   );
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector(`#humidity`).innerHTML = response.data.main.humidity;
   document.querySelector(`#wind`).innerHTML = Math.round(
     response.data.wind.speed
@@ -57,8 +58,6 @@ function showTemperature(response) {
     .setAttribute(`alt`, response.data.weather[0].description);
 }
 
-searchCity(`Rio de Janeiro`);
-
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
@@ -73,3 +72,23 @@ function searchLocation(position) {
 
   axios.get(apiUrl).then(showTemperature);
 }
+
+let celsiusTemperature = null;
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector(`#temperature`).innerHTML = Math.round(fahrenheitTemp);
+}
+document
+  .querySelector(`#fahrenheit`)
+  .addEventListener(`click`, showFahrenheitTemp);
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  document.querySelector(`#temperature`).innerHTML = celsiusTemperature;
+}
+
+document.querySelector(`#celsius`).addEventListener(`click`, showCelsiusTemp);
+
+searchCity(`Rio de Janeiro`);
