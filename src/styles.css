@@ -50,6 +50,11 @@ h1 {
   margin-left: 30px;
   font-weight: lighter;
 }
+
+.description:first-letter {
+  text-transform: capitalize;
+}
+
 .humidity,
 .wind {
   font-size: 11px;

@@ -34,6 +34,7 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 function showTemperature(response) {
+  console.log(response.data);
   document.querySelector(`#city`).innerHTML = response.data.name;
   document.querySelector(`#temperature`).innerHTML = Math.round(
     response.data.main.temp
@@ -43,7 +44,7 @@ function showTemperature(response) {
     response.data.wind.speed
   );
   document.querySelector(`#daily-description`).innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 
   document
     .querySelector(`#icon`)
@@ -51,6 +52,9 @@ function showTemperature(response) {
       `src`,
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+  document
+    .querySelector(`#icon`)
+    .setAttribute(`alt`, response.data.weather[0].description);
 }
 
 searchCity(`Rio de Janeiro`);
