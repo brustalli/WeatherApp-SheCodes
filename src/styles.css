@@ -24,11 +24,6 @@ body {
   color: #ffffff;
 }
 
-.units .active:hover {
-  text-decoration: none;
-  cursor: default;
-}
-
 h1 {
   padding: 25px 0 0 0;
   margin-left: 30px;
@@ -91,7 +86,7 @@ h1 {
 .iconSixDays {
   width: 43px;
 }
-.Days {
+.hours {
   font-size: 14px;
   margin-left: 40px;
 }
