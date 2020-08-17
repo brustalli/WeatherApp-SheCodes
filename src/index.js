@@ -27,19 +27,23 @@ function formatHours(timestamp) {
 }
 function showTemperature(response) {
   document.querySelector(`#city`).innerHTML = response.data.name;
-  celsiusTemperature = response.data.main.temp;
-  document.querySelector(`#temperature`).innerHTML = Math.round(
-    celsiusTemperature
-  );
+  dayTemperature = response.data.main.temp;
+  document.querySelector(`#temperature`).innerHTML = Math.round(dayTemperature);
+  document.querySelector(`#daily-description`).innerHTML =
+    response.data.weather[0].description;
   document.querySelector(`#actual-day`).innerHTML = formatDate(
     response.data.dt * 1000
+  );
+  document.querySelector(`#day-max-temp`).innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector(`#day-min-temp`).innerHTML = Math.round(
+    response.data.main.temp_min
   );
   document.querySelector(`#humidity`).innerHTML = response.data.main.humidity;
   document.querySelector(`#wind`).innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector(`#daily-description`).innerHTML =
-    response.data.weather[0].description;
 
   document
     .querySelector(`#icon`)
@@ -57,7 +61,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = null;
   let forecast = null;
 
-  for (let index = 0; index < 6; index++) {
+  for (let index = 0; index < 3; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
   <div class="col-5">
@@ -66,7 +70,7 @@ function displayForecast(response) {
           </p>
   </div>
     <div class="col-2">
-      <img
+      <img  class="iconHours"
           src="http://openweathermap.org/img/wn/${
             forecast.weather[0].icon
           }@2x.png"
@@ -74,9 +78,9 @@ function displayForecast(response) {
       />
     </div>
     <div class="col-5">
-      <p class="tempDays"><strong>${Math.round(
-        forecast.main.temp_max
-      )}° </strong> ${Math.round(forecast.main.temp_min)}°</p>
+      <spam class="tempHoursMax">${Math.round(forecast.main.temp_max)}°  </spam>
+      <spam class="tempHoursMin">
+      ${Math.round(forecast.main.temp_min)}°</spam>
     </div>`;
   }
 }

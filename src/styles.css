@@ -77,22 +77,32 @@ h1 {
   margin-top: -20px;
 }
 
-.dayMaxMinTemp {
+.dayMaxTemp {
   font-size: 14px;
-  margin-left: 50px;
+  margin-left: 25px;
+  margin-bottom: -30px;
+  font-weight: bold;
+}
+.dayMinTemp {
+  font-size: 14px;
+  margin-left: 10px;
   margin-bottom: -30px;
 }
-
-.iconSixDays {
+.iconHours {
   width: 43px;
 }
 .hours {
   font-size: 14px;
   margin-left: 40px;
 }
-.tempDays {
+.tempHoursMax {
   font-size: 14px;
+  font-weight: bold;
   margin-left: 25px;
+}
+.tempHoursMin {
+  font-size: 14px;
+  margin-left: 10px;
 }
 
 .form-control {
