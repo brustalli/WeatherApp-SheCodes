@@ -60,7 +60,6 @@ function displayForecast(response) {
   let forecastElement = document.querySelector(`#forecast`);
   forecastElement.innerHTML = null;
   let forecast = null;
-
   for (let index = 0; index < 3; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
@@ -91,9 +90,12 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
+
+let apiKeyPhotos = `17951086-b8690315a9046c4bce74e0f4d`;
+let apiUrlPhotos = `https://pixabay.com/api/?key=${apiKeyPhotos}=${city}&image_type=photo`;
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -119,8 +121,6 @@ function searchLocation(position) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-let celsiusTemperature = null;
-
 function showFahrenheitTemp(event) {
   event.preventDefault();
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
@@ -142,5 +142,7 @@ function showCelsiusTemp(event) {
 }
 
 document.querySelector(`#celsius`).addEventListener(`click`, showCelsiusTemp);
+
+let celsiusTemperature = null;
 
 searchCity(`Rio de Janeiro`);
