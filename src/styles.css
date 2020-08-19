@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-  width: 22rem;
+  width: 40rem;
   height: responsive;
   margin-left: 100px;
   margin-top: 30px;
@@ -108,7 +108,7 @@ h1 {
 .form-control {
   background-color: #ec6f4c;
   border-color: transparent;
-  box-shadow: 0 1px 1px #ec6e4c;
+  box-shadow: 0 1px 3px #8b3b25;
   margin-left: 25px;
   margin-top: 15px;
 }
@@ -116,6 +116,10 @@ h1 {
   background: transparent;
   border: transparent;
   margin-top: 20px;
+}
+
+.button:checked {
+  border: transparent;
 }
 .fa-search {
   color: #ec6e4c;

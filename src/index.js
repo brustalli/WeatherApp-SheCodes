@@ -94,9 +94,6 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-let apiKeyPhotos = `17951086-b8690315a9046c4bce74e0f4d`;
-let apiUrlPhotos = `https://pixabay.com/api/?key=${apiKeyPhotos}=${city}&image_type=photo`;
-
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#search-text-input").value;
