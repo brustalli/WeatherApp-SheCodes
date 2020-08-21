@@ -34,12 +34,7 @@ function showTemperature(response) {
   document.querySelector(`#actual-day`).innerHTML = formatDate(
     response.data.dt * 1000
   );
-  document.querySelector(`#day-max-temp`).innerHTML = Math.round(
-    response.data.main.temp_max
-  );
-  document.querySelector(`#day-min-temp`).innerHTML = Math.round(
-    response.data.main.temp_min
-  );
+
   document.querySelector(`#humidity`).innerHTML = response.data.main.humidity;
   document.querySelector(`#wind`).innerHTML = Math.round(
     response.data.wind.speed
@@ -60,27 +55,25 @@ function displayForecast(response) {
   let forecastElement = document.querySelector(`#forecast`);
   forecastElement.innerHTML = null;
   let forecast = null;
-  for (let index = 0; index < 3; index++) {
+  for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
-  <div class="col-5">
-    <p class="hours">
+  <ul>
+    <li class="hours">
       ${formatHours(forecast.dt * 1000)}
-          </p>
-  </div>
-    <div class="col-2">
+          </li>
+          <li class="box-icon">
       <img  class="iconHours"
           src="http://openweathermap.org/img/wn/${
             forecast.weather[0].icon
-          }@2x.png"
-
-      />
-    </div>
-    <div class="col-5">
+          }@2x.png"/>
+  </li>
+  <li class="hourTemp">
       <spam class="tempHoursMax">${Math.round(forecast.main.temp_max)}°  </spam>
       <spam class="tempHoursMin">
       ${Math.round(forecast.main.temp_min)}°</spam>
-    </div>`;
+      </li>
+      </ul>`;
   }
 }
 

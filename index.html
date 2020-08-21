@@ -7,6 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -31,16 +32,19 @@
             <span class="units">
               <a href="#" id="celsius" class="active">C°</a> |
               <a href="#" id="fahrenheit" class="fahrenheit">F°</a></span
-            >
+            ></br>
+            <span class="currentDay" id="actual-day"> </span>
           </div>
           <div class="col-6">
+            <spam class="iconCurrentBox">
             <img src="" alt="" class="iconCurrentDay" id="icon" />
+            </spam>
           </div>
         </div>
       </h1>
       <div class="row">
         <div class="col-6">
-          <h2 class="city" id="city"></h2>
+          <span class="city" id="city"></span>
           <p class="description" id="daily-description"></p>
         </div>
         <div class="col-6">
@@ -58,41 +62,32 @@
           </ul>
         </div>
       </div>
-      <div class="row">
-        <div class="col-7">
-          <span class="currentDay" id="actual-day"> </span>
-        </div>
-        <div class="col-5">
-          <spam class="dayMaxTemp" id="day-max-temp"></spam
-          ><spam><strong>°</strong></spam>
-          <spam class="dayMinTemp" id="day-min-temp"></spam><spam>°</spam>
-        </div>
+      <div class="row" id="forecast">
       </div>
-      <hr color="#EC6E4C" />
-      <div class="row" id="forecast"></div>
+      
       <form id="search-form">
-        <div class="row">
-          <div class="col-7">
+          <div class="row">
+            <div class="col-8">
             <input
               type="text"
               class="form-control"
               autocomplete="off"
-              placeholder="search"
+              placeholder="search a city"
               id="search-text-input"
             />
-          </div>
-          <div class="col-2">
+            </div>
+            <div class="col-4">
             <button class="button" id="search-button">
               <i class="fas fa-search"> </i>
             </button>
-          </div>
-          <div class="col-3">
+          
             <button class="button" id="location-button">
               <i class="fas fa-map-marker-alt"></i>
             </button>
+            </div>
           </div>
-        </div>
       </form>
+      
     </div>
 
     <script src="src/index.js"></script>
