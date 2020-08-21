@@ -13,54 +13,46 @@ body {
   padding-bottom: 25px;
   box-shadow: 3px 6px 4px #b6c3da;
 }
-
+h1 {
+  padding: 25px 0 0 0;
+  margin-left: 35px;
+}
+.currentTemperature {
+  font-size: 65px;
+}
 .units {
   position: relative;
   left: -11px;
   font-size: 13px;
   top: -35px;
 }
-
 .units .active {
   color: #919db2;
 }
-
-h1 {
-  padding: 25px 0 0 0;
-  margin-left: 30px;
-}
-
-.currentTemperature {
-  font-size: 65px;
+.city {
+  margin-top: -30px;
+  font-size: 16px;
   font-weight: lighter;
 }
-
+.currentDay {
+  font-size: 14px;
+}
 .iconCurrentDay {
-  width: 110px;
+  width: 100px;
 }
 .iconCurrentBox {
   background-color: #d7e2f0;
   box-shadow: 2px 4px 4px #bfcbdd;
   border-color: transparent;
-  border-style: solid;
-  padding: 10px;
+  padding: 25px 0 25px 0;
   border-radius: 50px;
 }
-.city {
-  position: relative;
-  top: -25px;
-  font-size: 16px;
-  margin-left: 30px;
-  font-weight: lighter;
-}
 .description {
-  position: relative;
-  top: -30px;
   font-size: 14px;
-  margin-left: 30px;
   font-weight: lighter;
+  margin-top: 30px;
+  margin-left: -50px;
 }
-
 .description:first-letter {
   text-transform: capitalize;
 }
@@ -68,13 +60,7 @@ h1 {
 .humidity,
 .wind {
   font-size: 11px;
-  position: relative;
-  top: -25px;
-  list-style: none;
-  margin-left: -12px;
-}
-.currentDay {
-  font-size: 14px;
+  margin-left: -50px;
 }
 
 ul {
@@ -83,6 +69,7 @@ ul {
 }
 .hours {
   margin-left: 7px;
+  margin-top: 30px;
 }
 .box-icon {
   background-color: #d7e2f0;
@@ -117,9 +104,9 @@ ul {
   background-color: #d7e2f0;
   border-color: transparent;
   border-radius: 20px;
-  box-shadow: 2px 3px 4px #bfcbdd;
+  box-shadow: 2px 4px 4px #bfcbdd;
   margin-left: 25px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .button:hover {
   background-color: #ffffff;

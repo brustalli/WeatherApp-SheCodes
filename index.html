@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -22,52 +21,51 @@
     <link rel="stylesheet" href="src/styles.css" />
     <title>WeatherApp</title>
   </head>
-
   <body>
     <div class="container">
       <h1>
         <div class="row">
-          <div class="col-6">
+          <div class="col-4">
             <span class="currentTemperature" id="temperature"></span>
             <span class="units">
               <a href="#" id="celsius" class="active">C°</a> |
-              <a href="#" id="fahrenheit" class="fahrenheit">F°</a></span
-            ></br>
-            <span class="currentDay" id="actual-day"> </span>
+              <a href="#" id="fahrenheit" class="fahrenheit">F°</a>
+            </span>
           </div>
-          <div class="col-6">
+          <div class="col-4">
             <spam class="iconCurrentBox">
-            <img src="" alt="" class="iconCurrentDay" id="icon" />
+              <img src="" alt="" class="iconCurrentDay" id="icon" />
             </spam>
+          </div>
+          <div class="col-4">
+            <ul>
+              <li class="description" id="daily-description"></li>
+              <li class="humidity">
+                Humidity
+                <spam id="humidity"> </spam>
+                %
+              </li>
+              <li class="wind">
+                Wind
+                <spam id="wind"></spam>
+                km/h
+              </li>
+            </ul>
           </div>
         </div>
       </h1>
       <div class="row">
         <div class="col-6">
-          <span class="city" id="city"></span>
-          <p class="description" id="daily-description"></p>
-        </div>
-        <div class="col-6">
           <ul>
-            <li class="humidity">
-              Humidity
-              <spam id="humidity"> </spam>
-              %
-            </li>
-            <li class="wind">
-              Wind
-              <spam id="wind"></spam>
-              km/h
-            </li>
+            <li class="city" id="city"></li>
+            <li class="currentDay" id="actual-day"></li>
           </ul>
         </div>
       </div>
-      <div class="row" id="forecast">
-      </div>
-      
+      <div class="row" id="forecast"></div>
       <form id="search-form">
-          <div class="row">
-            <div class="col-8">
+        <div class="row">
+          <div class="col-8">
             <input
               type="text"
               class="form-control"
@@ -75,19 +73,17 @@
               placeholder="search a city"
               id="search-text-input"
             />
-            </div>
-            <div class="col-4">
+          </div>
+          <div class="col-4">
             <button class="button" id="search-button">
               <i class="fas fa-search"> </i>
             </button>
-          
             <button class="button" id="location-button">
               <i class="fas fa-map-marker-alt"></i>
             </button>
-            </div>
           </div>
+        </div>
       </form>
-      
     </div>
 
     <script src="src/index.js"></script>

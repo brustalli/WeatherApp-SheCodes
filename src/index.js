@@ -130,9 +130,7 @@ function showCelsiusTemp(event) {
   celsius.classList.add(`active`);
   fahrenheit.classList.remove(`active`);
 }
-
 document.querySelector(`#celsius`).addEventListener(`click`, showCelsiusTemp);
-
 let celsiusTemperature = null;
 
 searchCity(`Rio de Janeiro`);
