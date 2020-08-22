@@ -29,6 +29,7 @@ function showTemperature(response) {
   document.querySelector(`#city`).innerHTML = response.data.name;
   dayTemperature = response.data.main.temp;
   document.querySelector(`#temperature`).innerHTML = Math.round(dayTemperature);
+  celsiusTemperature = response.data.main.temp;
   document.querySelector(`#daily-description`).innerHTML =
     response.data.weather[0].description;
   document.querySelector(`#actual-day`).innerHTML = formatDate(
